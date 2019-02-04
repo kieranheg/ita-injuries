@@ -4,22 +4,21 @@ import main.java.com.playg.models.ita.Injury;
 import main.java.com.playg.models.ita.InjuryImpl;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static java.util.Arrays.asList;
 import static main.java.com.playg.utils.Constants.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Injury_Test {
     
     @Test
     public void createInjuryWithSingleBodyPart() {
         //given
-        String injuryType = INJ_CUT;
-        List<String> bodyPart = asList(BP_ARM);
-        //when
-        Injury injury = new InjuryImpl(injuryType, bodyPart);
+        Injury injury = InjuryImpl.builder()
+                .injuryType(INJ_CUT)
+                .bodyParts(asList(BP_ARM))
+                .build();
         //then
+        assertEquals("InjuryImpl", injury.toString());
         assertEquals(INJ_CUT, injury.getInjuryType());
         assertEquals(BP_ARM, injury.getBodyParts().get(0));
     }
@@ -27,11 +26,12 @@ class Injury_Test {
     @Test
     public void createInjuryWithMultipleBodyParts() {
         //given
-        String injuryType = INJ_BRUISE;
-        List<String> bodyPart = asList(BP_ARM, BP_EAR, BP_NOSE);
-        //when
-        Injury injury = new InjuryImpl(injuryType, bodyPart);
+        Injury injury = InjuryImpl.builder()
+                .injuryType(INJ_BRUISE)
+                .bodyParts(asList(BP_ARM, BP_EAR, BP_NOSE))
+                .build();
         //then
+        assertEquals("InjuryImpl", injury.toString());
         assertEquals(INJ_BRUISE, injury.getInjuryType());
         assertEquals(BP_ARM, injury.getBodyParts().get(0));
         assertEquals(BP_EAR, injury.getBodyParts().get(1));
