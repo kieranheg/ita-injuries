@@ -1,7 +1,7 @@
 package test.java.com.playg.models;
 
-import main.java.com.playg.models.Injury;
-import main.java.com.playg.models.InjuryImpl;
+import main.java.com.playg.models.ita.Injury;
+import main.java.com.playg.models.ita.InjuryImpl;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

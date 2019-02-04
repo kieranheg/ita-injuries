@@ -1,4 +1,4 @@
-package main.java.com.playg.models;
+package main.java.com.playg.models.ita;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,5 +20,10 @@ public class InjuryImpl implements Injury {
     @Override
     public List<String> getBodyParts() {
         return bodyParts;
+    }
+    
+    @Override
+    public String toString() {
+        return "InjuryImpl";
     }
 }

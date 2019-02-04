@@ -1,4 +1,4 @@
-package main.java.com.playg.models;
+package main.java.com.playg.models.ita;
 
 import java.util.List;
 
