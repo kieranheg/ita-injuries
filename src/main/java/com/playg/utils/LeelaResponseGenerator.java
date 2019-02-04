@@ -11,9 +11,9 @@ public class LeelaResponseGenerator {
     
     public static List<LeelaInjury> buildLeelaInjuries() {
         return asList(
-                buildLeelaInjury(FNOL_Y, BODY_PART_100, asList(INJURY_131, INJURY_132, INJURY_133)),
-                buildLeelaInjury(FNOL_N, BODY_PART_110, asList(INJURY_141, INJURY_142, INJURY_143)),
-                buildLeelaInjury(FNOL_N, BODY_PART_100, asList(INJURY_141, INJURY_142, INJURY_143)));
+                buildLeelaInjury(FNOL_Y, Constants.BP_ARM, asList(Constants.INJ_BRUISE, Constants.INJ_CUT, Constants.INJ_SCRATCH)),
+                buildLeelaInjury(FNOL_N, Constants.BP_EAR, asList(Constants.INJ_TEAR, Constants.INJ_BREAK, Constants.INJ_SPRAIN)),
+                buildLeelaInjury(FNOL_N, Constants.BP_ARM, asList(Constants.INJ_TEAR, Constants.INJ_BREAK, Constants.INJ_SPRAIN)));
     }
     
     public static LeelaInjury buildLeelaInjury(final String fnol, final String bodyPart, final List<String> injuries) {

@@ -20,25 +20,25 @@ class LeelaInjuryResponse_Test {
         assertEquals(3, leelaInjuryResponse.getLeelaInjuries().size());
         
         assertEquals(FNOL_Y, leelaInjuryResponse.getLeelaInjuries().get(0).getFnol());
-        assertEquals(BODY_PART_100, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaBodyPart());
+        assertEquals(BP_ARM, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaBodyPart());
         assertEquals(3, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().size());
-        assertEquals(INJURY_131, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().get(0));
-        assertEquals(INJURY_132, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().get(1));
-        assertEquals(INJURY_133, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().get(2));
+        assertEquals(INJ_BRUISE, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().get(0));
+        assertEquals(INJ_CUT, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().get(1));
+        assertEquals(INJ_SCRATCH, leelaInjuryResponse.getLeelaInjuries().get(0).getLeelaInjuries().get(2));
   
         assertEquals(FNOL_N, leelaInjuryResponse.getLeelaInjuries().get(1).getFnol());
-        assertEquals(BODY_PART_110, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaBodyPart());
+        assertEquals(BP_EAR, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaBodyPart());
         assertEquals(3, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().size());
-        assertEquals(INJURY_141, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().get(0));
-        assertEquals(INJURY_142, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().get(1));
-        assertEquals(INJURY_143, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().get(2));
+        assertEquals(INJ_TEAR, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().get(0));
+        assertEquals(INJ_BREAK, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().get(1));
+        assertEquals(INJ_SPRAIN, leelaInjuryResponse.getLeelaInjuries().get(1).getLeelaInjuries().get(2));
         
         assertEquals(FNOL_N, leelaInjuryResponse.getLeelaInjuries().get(2).getFnol());
-        assertEquals(BODY_PART_100, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaBodyPart());
+        assertEquals(BP_ARM, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaBodyPart());
         assertEquals(3, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().size());
-        assertEquals(INJURY_141, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().get(0));
-        assertEquals(INJURY_142, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().get(1));
-        assertEquals(INJURY_143, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().get(2));
+        assertEquals(INJ_TEAR, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().get(0));
+        assertEquals(INJ_BREAK, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().get(1));
+        assertEquals(INJ_SPRAIN, leelaInjuryResponse.getLeelaInjuries().get(2).getLeelaInjuries().get(2));
     }
 
 }
