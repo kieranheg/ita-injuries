@@ -8,6 +8,7 @@ import java.util.List;
 @Builder
 @Data
 public class InjuryImpl implements Injury {
+    boolean fnol;
     String injuryType;
     List<String> bodyParts;
     

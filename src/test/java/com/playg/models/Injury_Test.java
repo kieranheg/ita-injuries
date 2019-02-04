@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static java.util.Arrays.asList;
 import static main.java.com.playg.utils.Constants.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Injury_Test {
     
@@ -14,11 +14,13 @@ class Injury_Test {
     public void createInjuryWithSingleBodyPart() {
         //given
         Injury injury = InjuryImpl.builder()
+                .fnol(true)
                 .injuryType(INJ_CUT)
                 .bodyParts(asList(BP_ARM))
                 .build();
         //then
         assertEquals("InjuryImpl", injury.toString());
+        assertTrue(injury.isFnol());
         assertEquals(INJ_CUT, injury.getInjuryType());
         assertEquals(BP_ARM, injury.getBodyParts().get(0));
     }
@@ -27,11 +29,13 @@ class Injury_Test {
     public void createInjuryWithMultipleBodyParts() {
         //given
         Injury injury = InjuryImpl.builder()
+                .fnol(true)
                 .injuryType(INJ_BRUISE)
                 .bodyParts(asList(BP_ARM, BP_EAR, BP_NOSE))
                 .build();
         //then
         assertEquals("InjuryImpl", injury.toString());
+        assertFalse(injury.isFnol());
         assertEquals(INJ_BRUISE, injury.getInjuryType());
         assertEquals(BP_ARM, injury.getBodyParts().get(0));
         assertEquals(BP_EAR, injury.getBodyParts().get(1));
