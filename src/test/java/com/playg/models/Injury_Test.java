@@ -35,7 +35,7 @@ class Injury_Test {
                 .build();
         //then
         assertEquals("InjuryImpl", injury.toString());
-        assertFalse(injury.isFnol());
+        assertTrue(injury.isFnol());
         assertEquals(INJ_BRUISE, injury.getInjuryType());
         assertEquals(BP_ARM, injury.getBodyParts().get(0));
         assertEquals(BP_EAR, injury.getBodyParts().get(1));
