@@ -1,4 +1,4 @@
-package main.java.com.playg.models.ita;
+package main.java.com.playg.models.ita.entity;
 
 import lombok.Builder;
 import lombok.Data;
@@ -7,13 +7,13 @@ import java.util.List;
 
 @Builder
 @Data
-public class InjuryImpl implements Injury {
+public class InjuryEntityImpl implements InjuryEntity {
     boolean fnol;
     String injuryType;
     List<String> bodyParts;
     
     @Override
     public String toString() {
-        return "InjuryImpl";
+        return "InjuryEntityImpl";
     }
 }

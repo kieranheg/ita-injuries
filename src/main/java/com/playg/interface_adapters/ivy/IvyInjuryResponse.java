@@ -1,4 +1,4 @@
-package main.java.com.playg.models.ivy;
+package main.java.com.playg.interface_adapters.ivy;
 
 import lombok.Builder;
 import lombok.Data;
@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @Builder
 public class IvyInjuryResponse {
-    List<IvyInjury> ivyInjuries;
+    List<IvyInjuryImpl> ivyInjuries;
     
     @Override
     public String toString() {
